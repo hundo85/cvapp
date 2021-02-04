@@ -1,0 +1,9 @@
+.resultDiv {
+  height: 100%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  gap: 40px;
+  border: 1px solid grey;
+  padding: 10px;
+}
+/*# sourceMappingURL=resultDiv.component.css.map */
