@@ -1,9 +1,15 @@
 import React from 'react'
 import './resetBtn.component.css'
 
-function ResetBtn() {
+function ResetBtn({setText}) {
+
+  function onClickHandler(){
+    setText("");
+    document.getElementById('textArea').value = "";
+  }
+
   return (
-    <button className="resetBtn">Reset</button>
+    <button id="resetBtn" onClick={() => onClickHandler()}>Reset</button>
   )
 }
 

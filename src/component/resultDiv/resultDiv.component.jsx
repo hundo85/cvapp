@@ -1,9 +1,9 @@
 import React from 'react';
 import './resultDiv.component.css';
 
-function ResultDiv() {
+function ResultDiv({text}) {
   return (
-    <div className="resultDiv"></div>
+    <div id="resultDiv">{text}</div>
   )
 }
 

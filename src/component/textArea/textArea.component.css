@@ -1,4 +1,4 @@
-.textArea {
+#textArea {
   height: 100%;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
