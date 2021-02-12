@@ -6,31 +6,23 @@ import ResetBtn from "./component/resetBtn/resetBtn.component";
 
 function App() {
   const [text, setText] = useState("");
+  const [datas, setDatas] = useState([]);
 
-  const getData = () => {
-    fetch("cv.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
+  useEffect(() => {
+    fetch("cv.json")
       .then(function (response) {
-        console.log(response);
         return response.json();
       })
       .then(function (myJson) {
-        console.log(myJson);
-        setText(myJson[1]);
+        setDatas(myJson);
       });
-  };
-
-  useEffect(() => {
-    getData();
   }, []);
+
+  //console.log(datas);
 
   return (
     <div className="App">
-      <TextArea text={text} setText={setText} />
+      <TextArea text={text} setText={setText} json={datas} />
       <ResultDiv text={text} />
       <ResetBtn setText={setText} />
     </div>
